@@ -1,22 +1,13 @@
-#!/bin/bash   
+#!/bin/bash
 
-rm controls_smarthometheme.txt
+#compass compile --force
 
-find . -type d -print0 | while IFS= read -r f; 
+rm controls_ha_theme.txt
+
+echo "MOV ./www/instar_theme/custom.js unused" >> controls_ha_theme.txt
+
+find ./www -type f \( ! -iname ".*" \) -print0 | while IFS= read -r -d '' f;
 do
-	out="DIR $f"
-	echo ${out//.\//} >> controls_smarthometheme.txt
+    out="UPD "$(stat -f "%Sm" -t "%Y-%m-%d_%T" $f)" "$(stat -f%z $f)" ${f}"
+    echo ${out//.\//} >> controls_ha_theme.txt
 done
-
-find . -type f -print0 | while IFS= read -r f; 
-do
-	out="UPD "$(stat -f "%Sm" -t "%Y-%m-%d_%T" $f)" "$(stat -f%z $f)" ${f}"
-	echo ${out//.\//} >> controls_smarthometheme.txt
-done
-
-# CHANGED file
-echo "haus-automatisierung.com theme - last change:" > CHANGED
-echo $(date +"%Y-%m-%d") >> CHANGED
-echo " - $(git log -1 --pretty=%B)" >> CHANGED
-
-

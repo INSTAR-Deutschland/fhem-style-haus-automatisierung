@@ -1,32 +1,49 @@
-# NEUE VERSION VERFÜGBAR (v2)
+# Mod
 
-**Bitte in den Branch v2 schauen - dieser Zweig wird nicht mehr weiterentwickelt!**
+This is a slightly modified version to the [Haus-Automatisierung.com skin](https://github.com/klein0r/fhem-style-haus-automatisierung) for the [FHEM Haus Automation](https://www.fhem.de/#Description):
 
-# FHEM Style: haus-automatisierung.com
 
-Mit diesem Style wird die FHEM-Oberfläche etwas anschaulicher - look and feel sind dabei an das Webdesign der Seite [haus-automatisierung.com](https://haus-automatisierung.com/) angelehnt.
+
+![INSTARfied](./preview.png)
+
+
+---
+ORIGINAL README
+
+# FHEM Style: haus-automatisierung.com (v2)
+
+Mit diesem Style wird die FHEM-Oberfläche etwas anschaulicher - "Look and Feel" sind dabei an das Webdesign der Seite [haus-automatisierung.com](https://haus-automatisierung.com/) angelehnt.
 
 ## Installation
 
-1. Laden der Quellen
+1. Hinzufügen des neuen Themes in Version 2
 
 ```
-cd /opt/fhem/www
-git clone https://github.com/klein0r/fhem-style-haus-automatisierung.git hausautomatisierung-com
+update add https://raw.githubusercontent.com/klein0r/fhem-style-haus-automatisierung/version-2/controls_ha_theme.txt
+update check ha_theme
+update all ha_theme
 ```
 
-2. Default style aktivieren
+2. Select Style -> hausautomatisierung_com
 
-3. Design aktivieren
-
-Danach muss auf dem WEB-Device das entsprechende Attribut gesetzt werden. In diesem Fall
+3. Ein paar Anpassungen am Web-Device:
 
 ```
-attr CssFiles hausautomatisierung-com/styles.css
+attr WEB JavaScripts codemirror/fhem_codemirror.js
+attr WEB codemirrorParam { "theme": "blackboard", "lineNumbers":true, "lineWrapping": true, "height": "auto" }
+attr WEB roomIcons Save.config:message_attention
 ```
 
 Einmal speichern und neu laden - fertig.
 
+## Fehler melden
+
+Bitte [hier](https://github.com/klein0r/fhem-style-haus-automatisierung/issues) einen Issue erstellen
+
 ## Vorschau
 
-![FHEM Style](https://raw.githubusercontent.com/klein0r/fhem-style-haus-automatisierung/master/preview.png)
+![FHEM Style](https://raw.githubusercontent.com/klein0r/fhem-style-haus-automatisierung/version-2/preview.png)
+
+## Smart-Home-Icons:
+
+Thanks @ https://dribbble.com/shots/2084609-Smart-House-Icon-Set-Free

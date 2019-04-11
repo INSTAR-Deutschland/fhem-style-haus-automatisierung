@@ -1,0 +1,169 @@
+.ui-dialog {
+    background: #fff !important;
+    border: 2px solid $primary-color !important;
+    padding: .2em !important;
+    border-radius: 0 !important;
+    color: $secondary-color !important;
+    padding: 0 !important;
+    
+    .ui-widget-header {
+        color: $primary-color-lt;
+    }
+
+    .CodeMirror {
+        width: auto;
+    }
+
+    .slider {
+        width: 350px;
+        border: 1px $primary-color solid;
+        height: 22px;
+
+        .handle {
+            -webkit-user-select: none; /* Safari 3.1+ */
+            -moz-user-select: none; /* Firefox 2+ */
+            -ms-user-select: none; /* IE 10+ */
+            user-select: none; /* Standard syntax */
+            background: $primary-color;
+            color: $odd-color;
+            cursor: pointer;
+            position: relative;
+            text-align: center;
+            width: 40px;
+            height: 22px;
+            line-height: 22px;
+        }
+    }
+
+    .colorpicker {
+        line-height: 30px;
+    }
+
+    .colorpicker_ct .slider {
+        background: url(../jscolor/ct_background.svg); background-size: 150px;
+    }
+    .colorpicker_ct_mired .slider {
+        background: url(../jscolor/ct_mired_background.svg); background-size: 150px;
+    }
+    .colorpicker_hue .slider {
+        background: url(../jscolor/hue_background.svg); background-size: 150px;
+    }
+}
+
+.ui-widget-content {
+    background: #fff !important;
+
+    pre {
+        font-family: 'Source Code Pro', monospace !important;
+    }
+
+    a {
+        color: $primary-color !important;
+        text-decoration: none;
+    }
+
+    caption, .mkTitle {
+        text-transform: uppercase;
+        font-size: $large-fontsize !important;
+        letter-spacing: 10px;
+        margin: 10px 0;
+    }
+
+    .makeTable {
+        margin-bottom: 10px;
+
+        table {
+            width: 100%;
+        }
+
+        thead th {
+            font-weight: bold;
+            color: $secondary-color;
+            padding: 10px 2px;
+            border-bottom: 1px $secondary-color solid;
+        }
+
+        tbody {
+            th {
+                padding-top: 5px;
+            }
+        }
+
+        tfoot {
+            color: $primary-color-lt;
+
+            td {
+                padding-top: 5px;
+            }
+        }
+
+        tr.odd > td,
+        tr.even > td {
+            padding: 5px;
+        }
+
+        .block tr.odd {
+            background: $odd-color;
+        }
+    }
+
+    .detLink {
+        border: 1px $primary-color solid;
+        padding: 2px 10px;
+        display: inline-block;
+        line-height: 20px;
+        vertical-align: top;
+        float: initial !important;
+
+        a {
+            color: $primary-color;
+        }
+    }
+
+    input[type="text"] {
+            border: 1px $primary-color solid;
+            color: #555;
+            background: #fff;
+            font-size: $large-fontsize;
+            height: 20px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+}
+
+.ui-button {
+    border-radius: 0 !important;
+    color: $primary-color !important;
+}
+
+.ui-dialog-titlebar {
+    display: block !important;
+    border: none !important;
+    border-radius: 0 !important;
+    background: $odd-color !important;
+}
+
+#dashboard {
+    .ui-widget-content a,
+    .fhemlog,
+    #fwmenu li a {
+        color: $primary-color !important;
+    }
+
+    .ui-corner-all,
+    .ui-corner-top,
+    .ui-corner-right,
+    .ui-corner-left,
+    .ui-corner-bottom,
+
+    .ui-corner-bl,
+    .ui-corner-br,
+    .ui-corner-tl,
+    .ui-corner-tr {
+        border-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+        border-top-right-radius: 0 !important;
+        border-top-left-radius: 0 !important;
+    }
+}

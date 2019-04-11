@@ -1,0 +1,541 @@
+#content {
+    max-width: 1000px;
+
+    .get, .set, .attr {
+        float: left;
+    }
+
+    pre {
+        font-family: 'Source Code Pro', monospace !important;
+        white-space: pre-wrap;
+        
+        &.CodeMirror-line {
+            white-space: pre;
+        }
+
+        &.log {
+            background: #000;
+            padding: 10px;
+        }
+    }
+
+    .roomoverview {
+        .icon {
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        .first-table-column {
+            width: 25%;
+            border-right: 2px $primary-color solid;
+            line-height: 29px;
+        }
+    }
+
+    .modCmd {
+        &input[type="submit"] {
+            border: 1px $primary-color solid;
+            border-radius: 0;
+            color: $primary-color;
+            padding: 1px 10px;
+            background: transparent;
+            font-size: $large-fontsize;
+        }
+    }
+
+    .makeTable {
+        clear: left;
+        display: inline;
+        float: left;
+        width: 100%;
+        font-size: $large-fontsize !important;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        overflow-x: scroll;
+
+        caption {
+            text-transform: uppercase;
+            font-size: $large-fontsize !important;
+            letter-spacing: 10px;
+            margin: 10px 0;
+        }
+
+        .first-table-column {
+            width: 25%;
+            border-right: 2px $primary-color solid;
+
+            img.icon {
+                vertical-align: middle;
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        table {
+            font-size: $default-fontsize;
+            text-transform: none;
+            letter-spacing: normal;
+
+            th {
+                font-weight: bold;
+                color: $secondary-color;
+                padding: 10px 2px;
+                border-bottom: 1px $secondary-color solid;
+            }
+        }
+
+        table.block td:nth-child(2) {
+            width: 60%;
+        }
+
+        & + .makeTable {
+            margin-top: 10px;
+        }
+
+        & + .makeSelect {
+            margin-top: 10px;
+        }
+
+        .slider {
+            height: 16px;
+
+            .handle {
+                height: 16px;
+                line-height: 16px;
+            }
+        }
+    }
+
+    .slider {
+        width: 350px;
+        border: 1px $primary-color solid;
+
+        .handle {
+            -webkit-user-select: none; /* Safari 3.1+ */
+            -moz-user-select: none; /* Firefox 2+ */
+            -ms-user-select: none; /* IE 10+ */
+            user-select: none; /* Standard syntax */
+            background: $primary-color;
+            color: $odd-color;
+            cursor: pointer;
+            position: relative;
+            text-align: center;
+            width: 40px;
+        }
+    }
+
+    .colorpicker_widget {
+        line-height: 20px;
+    }
+
+    .colorpicker_ct .slider {
+        background: url(../jscolor/ct_background.svg); background-size: 150px;
+    }
+    .colorpicker_ct_mired .slider {
+        background: url(../jscolor/ct_mired_background.svg); background-size: 150px;
+    }
+    .colorpicker_hue .slider {
+        background: url(../jscolor/hue_background.svg); background-size: 150px;
+    }
+
+    // Doif-Tools
+    .dval {
+        
+        > table {
+            margin-bottom: 10px;
+
+            .downText {
+                line-height: 24px;
+                font-family: 'Source Code Pro', monospace !important;
+            }
+        }
+
+        input {
+            border: 1px $primary-color solid;
+            border-radius: 0;
+            color: $primary-color;
+            padding: 1px 10px;
+            background: transparent;
+            font-size: $large-fontsize;
+        }
+    }
+
+    .makeSelect {
+        background: #fff;
+        border-left: 5px $primary-color solid;
+        border-right: 5px $primary-color solid;
+        box-sizing: border-box;
+        clear: left;
+        color: $secondary-color;
+        display: inline;
+        float: left;
+        padding: 5px;
+        width: 100%;
+
+        .downText {
+            line-height: 24px;
+            font-family: 'Source Code Pro', monospace !important;
+        }
+
+        select {
+            background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+            background-position: calc(100% - 20px) calc(0.5em),calc(100% - 15px) calc(0.5em),calc(100% - 2.5em) 0.2em;
+            background-size: 5px 5px, 5px 5px, 1px 0.9em;
+            background-repeat: no-repeat;
+
+            border: 1px $primary-color solid;
+            border-radius: 0;
+            color: $primary-color;
+            font-size: 16px;
+            line-height: 20px;
+            height: 24px;
+            margin-left: 5px;
+            margin-right: 5px;
+            padding: 0 10px;
+            min-width: 200px;
+        }
+
+        input[type="submit"] {
+            border: 1px $primary-color solid;
+            border-radius: 0;
+            color: $primary-color;
+            padding: 1px 10px;
+            background: transparent;
+            font-size: $large-fontsize;
+            height: 24px;
+        }
+
+        input[type="text"] {
+            border: 1px $primary-color solid;
+            color: #555;
+            background: transparent;
+            font-size: $large-fontsize;
+            height: 20px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        &[cmd="attr"] {
+            select.select_widget,
+            input[type="text"] {
+                width: 300px;
+            }
+        }
+
+        & + .makeTable {
+            margin-top: 10px;
+        }
+
+        .slider {
+            width: 250px;
+            height: 22px;
+            margin-left: 5px;
+            margin-right: 5px;
+
+            .handle {
+                height: 22px;
+                line-height: 22px;
+            }
+        }
+    }
+
+    table {
+        border-collapse: collapse;
+        max-width: 1000px;
+        width: 100%;
+
+        &.wide {
+            width: 100%;
+        }
+
+        select {
+            background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+            background-position: calc(100% - 15px) calc(0.5em + 1px),calc(100% - 10px) calc(0.5em + 1px),calc(100% - 2em) 0.4em;
+            background-size: 5px 5px, 5px 5px, 1px 0.9em;
+            background-repeat: no-repeat;
+
+            border: 1px $primary-color solid;
+            border-radius: 0;
+            color: $primary-color;
+            font-size: 100%;
+            line-height: 20px;
+            padding: 0 0px 0 10px;
+            min-width: 90px;
+            max-width: 400px;
+        }
+
+        .slider {
+            width: 150px;
+        }
+
+        &.block {
+            background: #fff;
+            border: none;
+            color: $secondary-color;
+
+            &.readings {
+                .changed {
+                    color: $primary-color;
+                    
+                    &:after {
+                        content: ' !!!';
+                    }
+                }
+            }
+        }
+
+        .no-background {
+            background: none !important;
+        }
+
+        &.block td:nth-child(1) {
+            white-space: nowrap;
+        }
+
+        &.block tr.odd {
+            background: $odd-color;
+        }
+
+        &.internals td:nth-child(1),
+        &.attributes td:nth-child(1),
+        &.readings td:nth-child(1),
+        &.assoc td:nth-child(1) {
+            width: 20%;
+        }
+
+        &.internals td:nth-child(2),
+        &.attributes td:nth-child(2),
+        &.readings td:nth-child(2),
+        &.assoc td:nth-child(2) {
+            word-break: break-all;
+        }
+
+        tr.odd > td,
+        tr.even > td {
+            padding: 5px;
+        }
+
+        .ex {
+            max-width: 1000px;
+            white-space: normal;
+        }
+
+        input + select,
+        select + select {
+            margin-left: 10px;
+        }
+    }
+
+    #pedit {
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font-size: $large-fontsize;
+        letter-spacing: 10px;
+
+        > * {
+            text-transform: none;
+            font-size: $default-fontsize;
+            letter-spacing: normal;
+        }
+
+        .plotEditor {
+            select.svgSrc, select.set {
+                border: 1px $primary-color solid;
+                border-radius: 0;
+                color: $primary-color;
+            }
+        }
+    }
+
+    .SVGlabel {
+        background: $odd-color;
+        padding: 5px;
+    }
+
+    .SVGplot {
+        background: $odd-color;
+        padding: 10px;
+    }
+
+    .odd .SVGplot, .even .SVGplot {
+        background: none !important;
+    }
+
+    .devType {
+        font-size: $large-fontsize !important;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        margin-top: 10px;
+
+        a {
+            color: #fff;
+        }
+    }
+
+    .odd .devType, .even .devType {
+        color: $secondary-color;
+        margin-left: 5px;
+        margin-bottom: 10px;
+        
+        a {
+            color: $secondary-color;
+        }
+    }
+
+    .detLink {
+        background: #00000061;
+        border: 1px $primary-color solid;
+        padding: 2px 10px;
+        display: inline-block;
+        margin-top: 10px;
+        line-height: 20px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        vertical-align: top;
+
+        a {
+            color: $primary-color;
+        }
+    }
+
+    #devSpecHelp {
+        background: #fff;
+        border-left: 5px $primary-color solid;
+        color: $secondary-color;
+        font-size: $default-fontsize !important;
+        font-family: 'Source Code Pro', monospace !important;
+        max-width: 985px;
+        padding: 5px;
+        width: 100%;
+        margin-top: 10px;
+        text-transform: none;
+        letter-spacing: normal !important;
+
+        h3 {
+            font-size: 16px;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        dd {
+            margin-left: 50px;
+        }
+
+        dt {
+            margin-left: 25px;
+        }
+
+        b, strong {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        code {
+            font-family: 'Source Code Pro', monospace;
+        }
+
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+            
+            li {
+                margin: 10px 0;
+            }
+        }
+
+        table {
+            td {
+                padding: 5px;
+            }
+        }
+    }
+
+    #ZWHelp {
+        font-size: $default-fontsize !important;
+        text-transform: none !important;
+        letter-spacing: normal !important;
+        background: #fff;
+        color: $secondary-color;
+        padding: 5px;
+        box-sizing: border-box;
+
+        &.makeTable.help:empty {
+            display: none;
+        }
+    }
+
+    div.img {
+        width: 100%;
+        background: #fff;
+        padding: 5px;
+        box-sizing: border-box;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .CodeMirror {
+        
+    }
+
+    #edit {
+        input[type="submit"] {
+            &.psc {
+                border: 1px $primary-color solid;
+                border-radius: 0;
+                color: $primary-color;
+                font-size: $large-fontsize;
+                margin: 10px;
+                background: transparent;
+                min-width: 200px;
+            }
+        }
+    }
+
+    div.fileList {
+        font-size: $large-fontsize !important;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+    }
+
+    // Edit files
+    > form {
+        margin-top: 10px;
+        background: #fff;
+        border-left: 5px $primary-color solid;
+        border-right: 5px $primary-color solid;
+        box-sizing: border-box;
+        padding: 5px;
+
+        > .saveName {
+            border: 1px $primary-color solid;
+            color: #555;
+            background: #fff;
+            font-size: $large-fontsize;
+            height: 20px;
+            margin-left: 5px;
+            margin-right: 5px;
+            float: right;
+        }
+
+        > input[name="saveAs"] {
+            float: right;
+        }
+
+        > input[name="save"],
+        > input[name="saveAs"] {
+            border: 1px $primary-color solid;
+            border-radius: 0;
+            color: $primary-color;
+            padding: 1px 10px;
+            background: transparent;
+            font-size: $large-fontsize;
+            height: 24px;
+        }
+    }
+}
