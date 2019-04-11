@@ -1,10 +1,26 @@
-# Mod
+# FHEM Skin Dark
 
 This is a slightly modified version to the [Haus-Automatisierung.com skin](https://github.com/klein0r/fhem-style-haus-automatisierung) for the [FHEM Haus Automation](https://www.fhem.de/#Description):
 
 
 
 ![INSTARfied](./preview.png)
+
+
+## How to install
+
+1. Copy the content of the `www` directory from the is repository to the `www` directory inside your FHEM installation (LINUX or Windows, both work).
+2. Access your FHEM user interface and click on __Unsorted__ and select the FHEMWEB / Web device:
+
+
+![INSTARfied](./activation_01.png)
+
+
+3. Select the `stylesheetPrefix Attribute` and type in `instar_theme` and confirm. Reload the website to see the result:
+
+
+![INSTARfied](./activation_02.png)
+
 
 
 ---
